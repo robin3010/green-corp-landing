@@ -33,12 +33,12 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background: transparent;
+  background: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  transition: background-color .25s, box-shadow .25s;
+  transition: background-color, box-shadow .25s;
 }
 .header__scrolled {
 background-color: #fff;

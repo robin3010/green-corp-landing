@@ -51,16 +51,18 @@ document.querySelector('#budget').addEventListener('change', function handleSele
   };
 });
 
-// анимации при скролле - изменение шапки, увеличение счетчика клиентов
+// анимации при скролле
 let animationInited = false;
 
 function updateScroll() {
+  // запуск увеличения счетчика клиентов
   let windowBottomPosition = window.scrollY + window.innerHeight;
   let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
   if (windowBottomPosition >= countElementPosition && !animationInited) {
     animationInited = true;
     initIncreaseNumAnim();
   };
+  //  плавное появление белого фона шапки
   if (window.scrollY > 0) {
     document.querySelector("header").classList.add("header__scrolled");
   } else {
@@ -69,7 +71,7 @@ function updateScroll() {
 };
 window.addEventListener("scroll", updateScroll);
 
-// плавный скролл
+// плавный скролл к якорной сслылке
 function addSmoothScroll(anchor) {
   anchor.addEventListener("click", function (event) {
     event.preventDefault();
